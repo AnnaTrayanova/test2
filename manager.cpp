@@ -14,7 +14,7 @@ void OrderManager::processCommand(const std::string& command) {
     std::string cmd;
 
     if (!(iss >> cmd)) {
-        return;  // Empty command, do nothing
+        return;  
     }
 
     if (cmd == "add") {
@@ -27,7 +27,7 @@ void OrderManager::processCommand(const std::string& command) {
                 }
                 currentOrder->addItem(product, quantity);
             } else {
-                std::cout << "no such product" << std::endl;
+                std::cout << "nO product" << std::endl;
             }
         }
     } else if (cmd == "checkout") {
